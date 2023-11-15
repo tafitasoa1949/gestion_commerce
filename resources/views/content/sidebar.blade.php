@@ -19,9 +19,14 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="index.jsp">
+        <a class="nav-link" href="{{ url('/proforma') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>huhu</span></a>
+        <span>Proforma</span></a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/bondecommande') }}">
+        <i class="fas fa-fw fa-table"></i>
+        <span>Bon de commande</span></a>
     </li>
 </ul>
 <!-- End of Sidebar -->

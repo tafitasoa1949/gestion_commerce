@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ProformaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [LoginController::class,'index']);
+// proforma
+Route::get('/proforma', [ProformaController::class,'voirBesoinEnCours'])->name('proforma');
+Route::get('proforma/{id}', [ProformaController::class,'voirProforma']);
+Route::get('detail_proforma/{id}', [ProformaController::class,'getDetail']);
