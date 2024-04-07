@@ -13,20 +13,87 @@
     <hr class="sidebar-divider my-0">
 
     <!-- Heading -->
+@if($fonction ==2)
     <div class="sidebar-heading">
-        Administrateur
+        {{$nom_profil}}
+        {{$fonction}}
     </div>
-
-    <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('/proforma') }}">
-        <i class="fas fa-fw fa-table"></i>
-        <span>Proforma</span></a>
+        <a class="nav-link" href="{{ url('/demande') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Demande</span></a>
     </li>
+
     <li class="nav-item">
-        <a class="nav-link" href="{{ url('/bondecommande') }}">
+        <a class="nav-link" href="{{ url('/liste') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Liste Demande</span></a>
+    </li>
+
+    <li class="nav-item">
+       <a class="nav-link" href="{{ url('/proforma') }}">
+       <i class="fas fa-fw fa-table"></i>
+       <span>Proforma</span></a>
+   </li>
+   <li class="nav-item">
+       <a class="nav-link" href="{{ url('/listbondecommande') }}">
+       <i class="fas fa-fw fa-table"></i>
+       <span>Bon de commande</span></a>
+   </li>
+        <li class="nav-item">
+        <a class="nav-link" href="{{ url('/listbondereception') }}">
         <i class="fas fa-fw fa-table"></i>
-        <span>Bon de commande</span></a>
+        <span>Bon de reception</span></a>
+    </li>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{{ url('/depot') }}">
+<i class="fas fa-fw fa-table"></i>
+<span>Depot</span></a>
+</li>
+</ul>
+
+@elseif($fonction == 4)
+    <div class="sidebar-heading">
+        {{$nom_profil}}
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/demande') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Demande</span></a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/liste') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Liste Demande</span></a>
     </li>
 </ul>
+@elseif($fonction == 3)
+<div class="sidebar-heading">
+        {{$nom_profil}}
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/demande') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Demande</span></a>
+    </li>
+    <li class="nav-item">
+       <a class="nav-link" href="{{ url('/listbondecommande') }}">
+       <i class="fas fa-fw fa-table"></i>
+       <span>Bon de commande</span></a>
+   </li>
+</ul>
+@else
+<div class="sidebar-heading">
+        {{$nom_profil}}
+    </div>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ url('/demande') }}">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Demande</span></a>
+    </li>
+</ul>
+
+@endif
 <!-- End of Sidebar -->

@@ -64,6 +64,9 @@
                                                 <td style="text-align: center;">
                                                     <a href="{{ url('detail_proforma/'.$indice->id) }}" class="btn btn-danger btn-user">Details</a>
                                                 </td>
+                                                <td style="text-align: center;">
+                                                    <a href="{{ url('bondecommande/'.$indice->idbesoin) }}" class="btn btn-success btn-user">Faire bon de commande</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

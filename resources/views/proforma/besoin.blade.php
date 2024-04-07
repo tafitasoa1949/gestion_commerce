@@ -38,7 +38,7 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Etat de stock</h1>
+                    <h1 class="h3 mb-2 text-gray-800">Besoin par departement</h1>
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
@@ -53,7 +53,7 @@
                                             <th>Materiel</th>
                                             <th>Quantite</th>
                                             <th></th>
-                                            <th></th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -65,9 +65,9 @@
                                                 <td style="text-align: center;">
                                                     <a href="{{ url('proforma/'.$besoin->id) }}" class="btn btn-warning btn-user">Voir proforma</a>
                                                 </td>
-                                                <td style="text-align: center;">
+                                                <!-- <td style="text-align: center;">
                                                     <a href="{{ url('bondecommande/'.$besoin->id) }}" class="btn btn-success btn-user">Faire bon de commande</a>
-                                                </td>
+                                                </td> -->
                                             </tr>
                                         @endforeach
                                     </tbody>
